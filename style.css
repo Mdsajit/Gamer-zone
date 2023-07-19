@@ -213,7 +213,7 @@ nav button {
 .online-games-section {
     margin: 0 200px;
     padding-top: 50px;
-    max-width: 1400px;
+    /* max-width: 1400px; */
 }
 .online-games-section h3 {
     color: #0B0223;
@@ -405,9 +405,12 @@ nav button {
 }
 /*gamer icon section start*/
 .gamer-icon-section {
-    max-width: 1400px;
-    margin: 0 200px;
+    margin: 10px 200px;
     padding: 120px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
 }
 
 .gamer-icon-box {
@@ -440,16 +443,7 @@ nav button {
     font-weight: 600;
     transition: .4s;
 }
-.gamer-icon-firstrow {
-    display: flex;
-    justify-content: space-between;
-    margin: 15px 5px;
-}
-.gamer-icon-secondrow {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 15px 5px;
-}
+
 
 /*footer part*/
 .footer {
@@ -525,7 +519,6 @@ nav button {
 /*responsive ness started*/
 @media screen and (max-width:576px) {
     nav{
-        max-width: 1400px;
         margin: 0 200px;
         display: flex;
         flex-direction: column;
@@ -729,35 +722,26 @@ nav button {
         line-height: 20px;
     }
     /*gamer icon box*/
-    .gamer-icon-firstrow {
+    .gamer-icon-section {
+        margin: 10px 200px;
+        padding: 120px 0;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
         justify-content: center;
-        align-content: center;
-}
-.gamer-icon-section {
-    max-width: 1400px;
-    margin: 0 100px;
-    padding: 120px 0;
-}
+        justify-items: center;
+    }
+
 .gamer-icon-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 200px;
-    height: 60px;
+    width: 170px;
+    height: 50px;
     border-radius: 45px;
     border: 2px solid transparent;
     padding: 0 10px;
 
-}
-.gamer-icon-secondrow {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    justify-content: center;
-    align-content: center;
 }
 
 }
@@ -884,6 +868,14 @@ nav button {
     .banner-section-second-title span {
         font-size: 16px;
     }
+        /*online game download section*/
+        .download-section {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 0 auto;
+            padding: 60px 0;
+        }
     /*online games part start*/
     .online-games-box {
         display: grid;
@@ -906,5 +898,14 @@ nav button {
     .online-games-section p {
         font-size: 16px;
         margin-bottom: 20px;
+    }
+    .gamer-icon-section {
+        margin: 10px 200px;
+        padding: 120px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        justify-content: center;
+        justify-items: center;
     }
 }
